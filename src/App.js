@@ -1,36 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
-import React from 'react';
-import "tailwindcss/tailwind.css";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Login from './AppPages/Login';
-import Home from './AppPages/Home';
+import Sidebar from "./AppPages/Sidebar/Sidebar";
+// import Home from "./view/Home";
+// import Hero from "./view/Hero";
 
 function App() {
     return ( <
-        Router >
+        div className = "app" > hello <
+        div className = "app-body" >
         <
-        div className = "App" >
-        <
-        header className = "mt-12" >
-        <
-        h1 > Chitter Chatter < /h1> <
-        nav >
-        <
-        Routes >
-        <
-        Route path = "/home"
-        element = { < Home / > }
-        /> <
-        Route path = "/"
-        element = { < Login / > }
-        /> <
-        /Routes> <
-        /nav> <
-        /header> <
+        Sidebar / > { /* Chat */ } <
         /div> <
-        /Router> 
+        /div>
+
     );
 }
 
 export default App;
+
+// <Router>
+//   <Routes>
+//     <Route
+//       path="/"
+//       element={
+//         <>
+//           <Header />
+//           <Hero />
+//         </>
+//       }
+//     />
+//     <Route path="/channels" element={<Home />} />
+//   </Routes>
+// </Router>

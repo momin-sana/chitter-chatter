@@ -1,17 +1,10 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../components/firebase/firebase";
 
 const Home = () => {
-    return ( <
-        div >
-        <
-        h1 > Welcome < /h1> <
-        Link to = "/" >
-        <
-        button > Go Back To Login < /button> <
-        /Link> <
-        /div>
-    )
-}
+    const [user] = useAuthState(auth);
+    return <div > { JSON.stringify(user) } < /div>;
+};
 
 export default Home;
