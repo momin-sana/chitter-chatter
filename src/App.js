@@ -6,7 +6,8 @@ import Sidebar from "./AppPages/Sidebar/Sidebar";
 
 function App() {
     return ( <
-        div className = "app" > hello <
+        div className = "app" >
+        <
         div className = "app-body" >
         <
         Sidebar / > { /* Chat */ } <

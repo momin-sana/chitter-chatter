@@ -7,7 +7,7 @@
     place-items: center;
     background-color: #dadbd3;
     height: 100vh;
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 
 .app-body {

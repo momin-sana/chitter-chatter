@@ -1,5 +1,3 @@
-import { DownloadIcon } from "@heroicons/react/outline";
-
 function Hero() {
     return ( <
         div className = "bg-discord_blue" >
@@ -17,9 +15,15 @@ function Hero() {
         <
         div className = " my-5 space-x-3" >
         <
-        button className = "bg-white p-2 rounded-full text-s md:text-s px-4 focus:outline-non hover:shadow-2xl hover:text-discord_blue hover:bg-black " > { DownloadIcon }
-        Download < /button> <
-        button className = " bg-black text-white p-2 rounded-full text-s md:text-s px-4 focus:outline-non hover:shadow-2xl hover:text-black hover:bg-white " > Open Discord in Browser < /button> <
+        button className = "bg-white p-2 rounded-full text-s md:text-s px-4 focus:outline-non hover:shadow-2xl hover:text-discord_blue hover:bg-black " >
+
+        { DownloadIcon }
+        Download <
+        /button> <
+        button className = " bg-black text-white p-2 rounded-full text-s md:text-s px-4 focus:outline-non hover:shadow-2xl hover:text-black hover:bg-white " >
+
+        Open Discord in Browser <
+        /button> <
         /div> <
         /div> <
         /div> <
