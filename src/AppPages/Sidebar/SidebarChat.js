@@ -18,6 +18,7 @@ function SidebarChat({ addNewChat }) {
         }
     };
 
+
     return !addNewChat ? ( <
         div className = "sidebarChat" >
         <
@@ -33,9 +34,8 @@ function SidebarChat({ addNewChat }) {
         div onClick = { createChat }
         className = "sidebarChat" >
         <
-        h2 > Add New ChatRoom < /h2> <
+        h2 > Add New Chat < /h2> <
         /div>
     );
 }
-
 export default SidebarChat;

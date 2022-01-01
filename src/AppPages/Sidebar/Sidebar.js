@@ -53,7 +53,7 @@ const Sidebar = () => {
         <
         div className = "sidebar-chats" >
         <
-        SidebarChat / >
+        SidebarChat addNewChat / >
         <
         SidebarChat / >
         <

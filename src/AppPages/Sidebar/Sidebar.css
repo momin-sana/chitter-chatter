@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     flex: 0.35;
+    width: 35vw;
 }
 
 
@@ -11,6 +12,7 @@
     display: flex;
     justify-content: space-between;
     padding: 10px;
+    width: 35vw;
     border-right: 1px solid lightgrey;
 }
 
@@ -41,25 +43,27 @@
     background-color: #f6f6f6;
     height: 39px;
     padding: 10px;
+    width: 35vw;
 }
 
 .sidebar_searchContainer {
     display: flex;
     align-items: center;
     background-color: white;
-    width: 100%;
+    width: 35vw;
     height: 35px;
     border-radius: 20px;
 }
 
 .sidebar_searchContainer>.MuiSvgIcon-root {
     color: gray;
-    padding: 10px;
+    padding: 7px;
 }
 
 .sidebar_searchContainer>input {
     border: none;
     margin-left: 10px;
+    width: 35vw;
 }
 
 
@@ -69,6 +73,7 @@
     background-color: rgb(255, 255, 255);
     flex: 1;
     overflow-y: auto;
+    width: 35vw;
 }
 
 .sidebarChat {
@@ -76,6 +81,7 @@
     padding: 20px;
     cursor: pointer;
     border-bottom: 1px solid #f6f6f6;
+    font-size: 13px;
 }
 
 .sidebarChat:hover {
