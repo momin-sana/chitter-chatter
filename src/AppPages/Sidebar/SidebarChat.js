@@ -18,7 +18,6 @@ function SidebarChat({ addNewChat }) {
         }
     };
 
-
     return !addNewChat ? ( <
         div className = "sidebarChat" >
         <
@@ -26,8 +25,8 @@ function SidebarChat({ addNewChat }) {
         /> <
         div className = "sidebarChat-info" >
         <
-        h2 > Room Name < /h2> <
-        p > Last Message... < /p> <
+        h2 > Room Name < /h2> <p> Last Message... </p >
+        <
         /div> <
         /div>
     ) : ( <

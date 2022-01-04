@@ -14,11 +14,9 @@ function App() {
         Sidebar / >
         <
         Chat / >
-
         <
         /div> <
         /div>
-
     );
 }
 

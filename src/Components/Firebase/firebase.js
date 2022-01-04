@@ -1,5 +1,6 @@
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/firestore/lite";
+// Import the functions you need from the SDKs you need
+import firebase from "firebase/app";
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -15,8 +16,12 @@ const firebaseConfig = {
     measurementId: "G-EEN11NCC6N"
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const db = getAnalytics(app);
 
-export default (db, app);
+// Initialize Firebase
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+const db = firebaseApp.firestore();
+const auth = firebase.auth();
+const provider = new firebase.auth.GoogleAuthProvider();
+const projectStorage = firebase.storage();
+
+export { auth, provider, db, projectStorage };
