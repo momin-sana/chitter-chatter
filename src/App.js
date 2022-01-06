@@ -1,38 +1,35 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "./AppPages/Sidebar/Sidebar";
 import Chat from "./AppPages/Chat/Chat";
-// import Home from "./view/Home";
-// import Hero from "./view/Hero";
+import Login from "./AppPages/Login/Login";
 
 function App() {
+    const [user, setUser] = useState(null);
+
     return ( <
-        div className = "app" >
-        <
-        div className = "app-body" >
-        <
-        Sidebar / >
-        <
-        Chat / >
-        <
-        /div> <
+        div className = "app" > {!user ? ( //if there's no user then open login page
+                <
+                Login / >
+            ) : ( <
+                div className = "app-body" >
+                <
+                Router >
+                <
+                Sidebar / >
+                <
+                Routes >
+                <
+                Route path = "/rooms/:roomId"
+                element = { < Chat / > }
+                /> <
+                /Routes> <
+                /Router> <
+                /div>
+            )
+        } <
         /div>
     );
 }
 
 export default App;
-
-// <Router>
-//   <Routes>
-//     <Route
-//       path="/"
-//       element={
-//         <>
-//           <Header />
-//           <Hero />
-//         </>
-//       }
-//     />
-//     <Route path="/channels" element={<Home />} />
-//   </Routes>
-// </Router>
