@@ -6,15 +6,15 @@ import {
     MoreVert,
     SearchOutlined,
 } from "@material-ui/icons";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import db, { auth } from "../../Components/Firebase/firebase";
 import { useStateValue } from "../../StateProvider";
 import "./Chat.css";
+import ChatMessage from "./ChatMessage";
 import firebase from "firebase/compat/app";
 
 function Chat() {
-    const scrollWindow = useRef();
     const [input, setInput] = useState("");
     const [seed, setSeed] = useState("");
     const [roomName, setRoomName] = useState("");
@@ -57,7 +57,6 @@ function Chat() {
             photoURL,
         });
         setInput("");
-        scrollWindow.current.scrollIntoView({ behavior: "smooth" });
     };
 
     return ( <
@@ -69,7 +68,20 @@ function Chat() {
         /> <
         div className = "chat-headerInfo" >
         <
-        h3 > { roomName } < /h3> <p> Last seen at... </p >
+        h3 > { roomName } < /h3> 
+
+        {
+            /*
+                    <p> 
+                        Last seen {""}
+                        {new Date(
+                          messages[messages.length -1].
+                          timestamp.toDate()
+                        ).toUTCString} 
+                      </p>
+                    */
+        }
+
         <
         /div> <
         div className = "chat-headerRight" >
@@ -95,8 +107,8 @@ function Chat() {
 
         <
         div className = "chat-body" > {
-            messages.map((message) => ( <
-                p className = { `chat-message ${true && "chat-reciever"}` } >
+            messages && messages.map((message) => ( <
+                p className = { `chat-message ${message.name === user.uid && "chat-reciever"}` } >
                 <
                 span className = "chat-name" > { message.user } < /span> { message.message } <
                 span className = "chat-timestamp" >
